@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Palette, Code, Sparkles } from 'lucide-react';
+import { GraduationCap, Palette, Code, Sparkles, Download, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const interests = [
   { icon: Code, label: 'Frontend' },
@@ -74,7 +75,7 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-wrap gap-3"
+              className="flex flex-wrap gap-3 mb-8"
             >
               {interests.map((interest, index) => (
                 <motion.div
@@ -89,32 +90,50 @@ const AboutSection = () => {
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* Resume Download Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity group"
+              >
+                <a href="/resume.pdf" download="Resume.pdf">
+                  <Download className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+                  Download Resume
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
 
-          {/* Visual Element */}
+          {/* Photo Placeholder */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Abstract Shapes */}
+            <div className="relative aspect-[4/5] max-w-md mx-auto">
+              {/* Decorative Frame */}
               <motion.div
                 className="absolute inset-0 border-gradient rounded-3xl"
                 animate={{
-                  rotate: [0, 5, 0, -5, 0],
+                  rotate: [0, 2, 0, -2, 0],
                 }}
                 transition={{
-                  duration: 10,
+                  duration: 8,
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
               />
               <motion.div
-                className="absolute inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl"
+                className="absolute inset-2 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl"
                 animate={{
-                  scale: [1, 1.02, 1],
+                  scale: [1, 1.01, 1],
                 }}
                 transition={{
                   duration: 4,
@@ -122,15 +141,19 @@ const AboutSection = () => {
                   ease: 'easeInOut',
                 }}
               />
-              <div className="absolute inset-8 bg-card rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="text-center p-8">
+              
+              {/* Photo Container */}
+              <div className="absolute inset-4 bg-card rounded-2xl overflow-hidden">
+                {/* Replace this div with an actual image when you have one */}
+                {/* <img src="/your-photo.jpg" alt="Profile" className="w-full h-full object-cover" /> */}
+                <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-muted/50 to-muted">
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={isInView ? { scale: 1 } : {}}
                     transition={{ duration: 0.6, delay: 0.6, type: 'spring' }}
-                    className="text-8xl font-bold text-gradient mb-4"
+                    className="w-32 h-32 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4"
                   >
-                    {'</>'}
+                    <User className="w-16 h-16 text-primary/60" />
                   </motion.div>
                   <motion.p
                     initial={{ opacity: 0 }}
@@ -138,22 +161,22 @@ const AboutSection = () => {
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className="text-muted-foreground text-sm"
                   >
-                    Code meets creativity
+                    Your photo here
                   </motion.p>
                 </div>
               </div>
 
               {/* Floating Elements */}
               <motion.div
-                className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center glow-primary"
-                animate={{ y: [0, -10, 0] }}
+                className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center glow-primary shadow-lg"
+                animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <Code className="w-8 h-8 text-primary-foreground" />
+                <Code className="w-7 h-7 text-primary-foreground" />
               </motion.div>
               <motion.div
-                className="absolute -bottom-4 -left-4 w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center"
-                animate={{ y: [0, 10, 0] }}
+                className="absolute -bottom-4 -left-4 w-14 h-14 bg-card border border-border rounded-xl flex items-center justify-center shadow-lg"
+                animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <Palette className="w-6 h-6 text-primary" />
