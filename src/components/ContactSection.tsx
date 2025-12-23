@@ -7,9 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
+  { icon: Github, href: 'https://github.com/THARUN-KRSHN', label: 'GitHub' },
+  { icon: Linkedin, href: 'www.linkedin.com/in/tharun-krishna-c-u-872a4b325', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/tharuneyyh.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', label: 'Instagram' },
+  { icon: Mail, href: 'mailto:tharunkrishnachoolikattil@gmail.com ?subject=Portfolio Inquiry', label: 'Email' },
+  { icon: MapPin, href: 'https://maps.app.goo.gl/JUdoD9Y5pGgEmvwU7', label: 'Location' }, 
 ];
 
 const ContactSection = () => {
@@ -156,7 +158,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium">hello@portfolio.dev</p>
+                    <p className="font-medium">tharunkrishnachoolikattil@gmail.com</p>
                   </div>
                 </div>
                 <div className="p-6 rounded-xl bg-card/50 border border-border hover:border-primary/50 transition-colors duration-300 flex items-center gap-4">

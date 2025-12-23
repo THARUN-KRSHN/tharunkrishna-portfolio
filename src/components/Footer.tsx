@@ -18,7 +18,7 @@ const Footer = () => {
                 className="text-xl font-bold text-gradient"
                 whileHover={{ scale: 1.05 }}
               >
-                Portfolio
+                Tharun Krishna C U
               </motion.a>
               <p className="text-sm text-muted-foreground text-center md:text-left">
                 Crafting digital experiences with passion
@@ -28,9 +28,9 @@ const Footer = () => {
             {/* Center - Social Links */}
             <div className="flex items-center gap-4">
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Instagram, href: '#', label: 'Instagram' },
+                { icon: Github, href: 'https://github.com/THARUN-KRSHN', label: 'GitHub' },
+                { icon: Linkedin, href: 'www.linkedin.com/in/tharun-krishna-c-u-872a4b325', label: 'LinkedIn' },
+                { icon: Instagram, href: 'https://www.instagram.com/tharuneyyh.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', label: 'Instagram' },
               ].map((social) => (
                 <motion.a
                   key={social.label}
@@ -58,8 +58,8 @@ const Footer = () => {
           {/* Copyright */}
           <div className="mt-8 pt-8 border-t border-border text-center">
             <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-              © {new Date().getFullYear()} Made with{' '}
-              <Heart className="w-4 h-4 text-primary inline-block" /> All rights reserved.
+              © {new Date().getFullYear()}
+               All rights reserved.
             </p>
           </div>
         </div>

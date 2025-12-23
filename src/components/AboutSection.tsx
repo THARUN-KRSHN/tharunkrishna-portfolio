@@ -144,7 +144,7 @@ const AboutSection = () => {
               
               {/* Photo Container */}
               <div className="absolute inset-4 bg-card rounded-2xl overflow-hidden">
-                {/* Replace this div with an actual image when you have one */}
+                <img src="/photo.jpeg" alt="Profile" className="w-full h-full object-cover" />
                 {/* <img src="/your-photo.jpg" alt="Profile" className="w-full h-full object-cover" /> */}
                 <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-muted/50 to-muted">
                   <motion.div
